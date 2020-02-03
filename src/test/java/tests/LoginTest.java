@@ -10,16 +10,16 @@ public class LoginTest extends BaseTest {
     public void login() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
-        loginPage.loginUser("aqa1@mailinator.com", System.getProperty("password"));
+        loginPage.loginUser("aqa1@mailinator.com", System.getProperty("password", "password04"));
         HomeIntegratedAssessmentsPage page = new HomeIntegratedAssessmentsPage(driver);
         page.openPage();
         page.clickNew();
         page.clickNext();
         page.clickYes();
-        page.completeForm();
-        page.fillInText();
-        //page.save();
+        page.fillInInputFields();
+        page.fillInTextFields();
+        page.selectDropdownOption();
+        //page.saveForm();
     }
-
 
 }

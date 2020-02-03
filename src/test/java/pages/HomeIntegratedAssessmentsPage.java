@@ -1,9 +1,11 @@
 package pages;
 
+import elements.SFDropdown;
 import elements.SFInput;
 import elements.SFTextArea;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomeIntegratedAssessmentsPage extends BasePage {
@@ -46,12 +48,12 @@ public class HomeIntegratedAssessmentsPage extends BasePage {
         return this;
     }
 
-    public void completeForm() {
+    public void fillInInputFields() {
         new SFInput().write(driver, "Assessment Date", "01/12/2020");
         new SFInput().write(driver, "Date Assessor Signed", "01/14/2020");
     }
 
-    public void fillInText() {
+    public void fillInTextFields() {
         new SFTextArea().write(driver, "Accessibility Concerns Explained", "TEST Accessibility Concerns Explained");
         new SFTextArea().write(driver, "Home Description Comments", "TEST Home Description Comments");
         new SFTextArea().write(driver, "Home Meaning Comments", " TEST Home Meaning Comments");
@@ -69,7 +71,39 @@ public class HomeIntegratedAssessmentsPage extends BasePage {
         new SFTextArea().write(driver, "Home/Environment Comments", "TEST Home/Environment Comments");
     }
 
-    public void save() {
+    public void selectDropdownOption() {
+        new SFDropdown().write(driver, "Status");
+        new SFDropdown().write(driver, "Assessment Type");
+        new SFDropdown().write(driver, "Assessment Type");
+        new SFDropdown().write(driver, "Dwelling Type");
+        new SFDropdown().write(driver, "Accessibility Concerns");
+        new SFDropdown().write(driver, "Family Living On");
+        new SFDropdown().write(driver, "Number of Bedrooms");
+        new SFDropdown().write(driver, "Internet in Home");
+        new SFDropdown().write(driver, "Stairs Required to Consumer Bedroom");
+        new SFDropdown().write(driver, "Wifi in Home");
+        new SFDropdown().write(driver, "Number of Bathrooms");
+        new SFDropdown().write(driver, "Computer / Tablet in Home");
+        new SFDropdown().write(driver, "Stairs Required to Consumer Bathroom");
+        new SFDropdown().write(driver, "Caregiver Smart Phone");
+        new SFDropdown().write(driver, "Caregiver Smart Phone Brand");
+        new SFDropdown().write(driver, "Caregiver Technology Proficiency");
+        new SFDropdown().write(driver, "Home Ownership (Current Status)");
+        new SFDropdown().write(driver, "Home Stability");
+        new SFDropdown().write(driver, "Life Essentials");
+        new SFDropdown().write(driver, "Energy Assistance");
+        new SFDropdown().write(driver, "Food Assistance");
+        new SFDropdown().write(driver, "Referral for Energy Assistance");
+        new SFDropdown().write(driver, "Referral for Food Assistance");
+        new SFDropdown().write(driver, "Pets In Home?");
+        new SFDropdown().write(driver, "Smokers in the Home");
+        new SFDropdown().write(driver, "Problems with Pets");
+        new SFDropdown().write(driver, "Overall Safety Concerns");
+        new SFDropdown().write(driver, "Does Consumer Feel Safe?");
+        new SFDropdown().write(driver, "Does Caregiver Feel Safe?");
+    }
+
+    public void saveForm() {
         driver.findElement(SAVE_BUTTON).click();
     }
 
