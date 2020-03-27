@@ -41,5 +41,4 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
         login.click();
     }
-
 }
