@@ -49,7 +49,7 @@ public class HomeIntegratedAssessmentsPage extends BasePage {
     }
 
     public void fillInInputFields(HIS his) {
-        new SFInput().write(driver, "Assessment Date", his.getAssessmentDate());
+        new SFInput().write(driver, "Assessment Date", his.getAccessibilityConcerns());
         new SFInput().write(driver, "Date Assessor Signed", his.getDateAssessorSigned());
     }
 

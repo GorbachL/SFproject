@@ -37,4 +37,5 @@ public class HIS {
     String OverallSafetyConcerns;
     String DoesConsumerFeelSafe;
     String DoesCaregiverFeelSafe;
+
 }
